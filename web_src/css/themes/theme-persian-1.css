@@ -1,0 +1,289 @@
+@import "./theme-gitea-auto.css";
+
+@font-face {
+  font-family: IRANSansX;
+  src: url("../fonts/IRANSansX-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Vazirmatn;
+  src: url("../fonts/vazirmatn-variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+gitea-theme-meta-info {
+  --theme-display-name: "Persian 1";
+  --theme-color-scheme: "auto";
+}
+
+:root[data-theme="persian-1"] {
+  direction: rtl;
+  --fonts-proportional: "IRANSansX", "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
+  --fonts-regular: "IRANSansX", "Vazirmatn", "Segoe UI", Tahoma, sans-serif;
+  --border-radius: 10px;
+  --border-radius-medium: 14px;
+  --color-logo: #e2b65d;
+}
+
+@media (prefers-color-scheme: light) {
+  :root[data-theme="persian-1"] {
+    --color-primary: #12645e;
+    --color-primary-contrast: #ffffff;
+    --color-primary-dark-1: #0e554f;
+    --color-primary-dark-2: #0a4541;
+    --color-primary-hover: var(--color-primary-dark-1);
+    --color-primary-active: var(--color-primary-dark-2);
+    --color-primary-alpha-10: #12645e1a;
+    --color-primary-alpha-20: #12645e33;
+    --color-primary-alpha-30: #12645e4d;
+    --color-primary-alpha-40: #12645e66;
+    --color-primary-alpha-50: #12645e80;
+    --color-primary-alpha-60: #12645e99;
+    --color-primary-alpha-70: #12645eb3;
+    --color-primary-alpha-80: #12645ecc;
+    --color-primary-alpha-90: #12645ee6;
+    --color-accent: #d49a36;
+    --color-body: #f4f4ed;
+    --color-box-body: #fffefa;
+    --color-box-header: #e8eee7;
+    --color-box-body-highlight: #e2f0eb;
+    --color-card: #fffefa;
+    --color-secondary: #d4ded7;
+    --color-secondary-bg: #e9eee9;
+    --color-secondary-nav-bg: #f4f4ed;
+    --color-code-bg: #eef2ed;
+    --color-text-dark: #172a27;
+    --color-text: #20332f;
+    --color-text-light: #344a45;
+    --color-text-light-1: #4b625c;
+    --color-text-light-2: #647a73;
+    --color-text-light-3: #7b8f88;
+    --color-nav-bg: #153b38;
+    --color-nav-text: #f0f5ef;
+    --color-nav-hover-bg: #28534d;
+    --color-nav-active-bg: #234b46;
+    --color-menu: #fffefa;
+    --color-button: #f5f7f3;
+    --color-shadow: #18332d1c;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="persian-1"] {
+    --color-primary: #68c8b3;
+    --color-primary-contrast: #102522;
+    --color-primary-dark-1: #83d5c3;
+    --color-primary-dark-2: #9ce0d1;
+    --color-primary-light-1: #45ae99;
+    --color-primary-light-2: #318e7d;
+    --color-primary-hover: var(--color-primary-dark-1);
+    --color-primary-active: var(--color-primary-dark-2);
+    --color-primary-alpha-10: #68c8b31a;
+    --color-primary-alpha-20: #68c8b333;
+    --color-primary-alpha-30: #68c8b34d;
+    --color-primary-alpha-40: #68c8b366;
+    --color-primary-alpha-50: #68c8b380;
+    --color-primary-alpha-60: #68c8b399;
+    --color-primary-alpha-70: #68c8b3b3;
+    --color-primary-alpha-80: #68c8b3cc;
+    --color-primary-alpha-90: #68c8b3e6;
+    --color-accent: #e0b45d;
+    --color-body: #101b19;
+    --color-box-body: #172421;
+    --color-box-header: #1d302b;
+    --color-box-body-highlight: #1b342e;
+    --color-card: #172421;
+    --color-secondary: #30423c;
+    --color-secondary-bg: #243630;
+    --color-secondary-nav-bg: #14211e;
+    --color-code-bg: #111d1a;
+    --color-text-dark: #f2f5f0;
+    --color-text: #e0e9e3;
+    --color-text-light: #c3d1c9;
+    --color-text-light-1: #a7b9af;
+    --color-text-light-2: #8da197;
+    --color-text-light-3: #71877c;
+    --color-nav-bg: #0d2624;
+    --color-nav-text: #edf4ee;
+    --color-nav-hover-bg: #25453f;
+    --color-nav-active-bg: #1b3c36;
+    --color-menu: #192723;
+    --color-button: #20332e;
+    --color-shadow: #00000050;
+  }
+}
+
+:root[data-theme="persian-1"] body {
+  direction: rtl;
+  text-align: right;
+  background-image: radial-gradient(circle at 1px 1px, var(--color-primary-alpha-10) 1px, transparent 1.5px);
+  background-size: 28px 28px;
+  background-attachment: fixed;
+}
+
+:root[data-theme="persian-1"] #navbar {
+  min-height: 58px;
+  padding-inline: 16px;
+  border-bottom: 2px solid var(--color-accent);
+  box-shadow: 0 5px 18px var(--color-shadow);
+}
+
+:root[data-theme="persian-1"] #navbar > .item,
+:root[data-theme="persian-1"] #navbar > .navbar-list > .item {
+  border-radius: 9px;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+:root[data-theme="persian-1"] #navbar > .item.active,
+:root[data-theme="persian-1"] #navbar > .navbar-list > .item.active {
+  background: var(--color-nav-active-bg);
+  box-shadow: inset 0 -2px 0 var(--color-accent);
+}
+
+:root[data-theme="persian-1"] .secondary-nav {
+  border-bottom: 1px solid var(--color-secondary);
+  box-shadow: 0 5px 18px var(--color-shadow);
+}
+
+:root[data-theme="persian-1"] .repo-header {
+  padding-block: 0.8rem;
+}
+
+:root[data-theme="persian-1"] .repository .repository-summary .segment.sub-menu {
+  border-radius: var(--border-radius-medium);
+  background: var(--color-box-body);
+  box-shadow: 0 3px 12px var(--color-shadow);
+}
+
+:root[data-theme="persian-1"] .repository .repository-summary .sub-menu .item {
+  min-height: 42px;
+  transition: color 140ms ease, background-color 140ms ease;
+}
+
+:root[data-theme="persian-1"] .repository .repository-summary .sub-menu .item.active {
+  color: var(--color-primary);
+  background: var(--color-box-body-highlight);
+  box-shadow: inset 0 -2px 0 var(--color-accent);
+}
+
+:root[data-theme="persian-1"] .ui.segment:not(.attached),
+:root[data-theme="persian-1"] .ui.card {
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 4px 16px var(--color-shadow);
+}
+
+:root[data-theme="persian-1"] .ui.attached.segment,
+:root[data-theme="persian-1"] .ui.attached.table.segment {
+  border-color: var(--color-secondary);
+}
+
+:root[data-theme="persian-1"] .ui.top.attached.header {
+  border-bottom-color: var(--color-accent);
+}
+
+:root[data-theme="persian-1"] .ui.table thead th {
+  background: var(--color-box-header);
+}
+
+:root[data-theme="persian-1"] .ui.table tbody tr:hover {
+  background: var(--color-hover);
+}
+
+:root[data-theme="persian-1"] input:not([type="checkbox"]):not([type="radio"]),
+:root[data-theme="persian-1"] textarea,
+:root[data-theme="persian-1"] select {
+  border-radius: 9px;
+}
+
+:root[data-theme="persian-1"] .ui.input > input,
+:root[data-theme="persian-1"] .ui.form textarea,
+:root[data-theme="persian-1"] .ui.form select {
+  border-color: var(--color-secondary);
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+:root[data-theme="persian-1"] .ui.input > input:focus,
+:root[data-theme="persian-1"] .ui.form textarea:focus,
+:root[data-theme="persian-1"] .ui.form select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-alpha-10);
+}
+
+:root[data-theme="persian-1"] .ui.button {
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight-medium);
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+}
+
+:root[data-theme="persian-1"] .ui.primary.button {
+  box-shadow: 0 2px 0 color-mix(in srgb, var(--color-primary) 65%, black);
+}
+
+:root[data-theme="persian-1"] .ui.primary.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px var(--color-shadow);
+}
+
+:root[data-theme="persian-1"] .ui.attached.header:has(> .ui.right) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-block);
+}
+
+:root[data-theme="persian-1"] .ui.attached.header > .ui.right {
+  position: static;
+  flex: 0 0 auto;
+}
+
+:root[data-theme="persian-1"] :focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+:root[data-theme="persian-1"] .ui.menu .item.active,
+:root[data-theme="persian-1"] .ui.secondary.menu .active.item {
+  color: var(--color-primary);
+}
+
+:root[data-theme="persian-1"] .ui.dropdown .menu {
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--border-radius-medium);
+  box-shadow: 0 10px 28px var(--color-shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root[data-theme="persian-1"] *,
+  :root[data-theme="persian-1"] *::before,
+  :root[data-theme="persian-1"] *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:root[data-theme="persian-1"] :is(code, pre, .monospace, [dir="ltr"]) {
+  direction: ltr;
+  text-align: left;
+}
+
+:root[data-theme="persian-1"] #repo-files-table {
+  direction: ltr;
+}
+
+:root[data-theme="persian-1"] #repo-files-table .repo-file-cell.name,
+:root[data-theme="persian-1"] #repo-files-table .repo-file-last-commit {
+  direction: ltr;
+  text-align: left;
+}
+
+:root[data-theme="persian-1"] .repository .non-diff-file-content .file-view,
+:root[data-theme="persian-1"] .repository .diff-file-box .file-body.file-code {
+  direction: ltr;
+  text-align: left;
+}
